@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --medyoBlack: #191919;
+  --violet: #7F00FF;
+  --blue: #3880FF;
+}
+
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--medyoBlack);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  height: 100%;
+  background: url('img/cover-img2.jpg') center center/cover;
+  flex: 0 1 53vw;
+  position: relative;
+}
+
+.content {
+  flex: 0 0 47vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+
+/* Modal  bobo*/
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+
+  width: max-content;
+  padding: 5rem;
+  min-height: 250px;
+  position: absolute;
+  z-index: 2;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  top: 10%;
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  
+}
+
+
+.modal .flex2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.modal .flex2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin: 1rem 0 0rem 0;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.modal a {
+ color: var(--blue);
+ cursor:pointer;
+}
+
+.modal a:hover{
+  text-decoration: underline;
+}
+
+.modal-btn{
+  background: var(--violet);
+  color: #fff;
+  transition: all .2s ease;
+
+  cursor:pointer;
+  margin: 1rem 0 0rem 0;
+}
+.modal-btn:hover, .modal-btn2:hover{
+  opacity:.9;
+}
+
+.modal-btn2{
+  border: 1px solid var(--violet);
+  color: var(--medyoBlack);
+  transition: all .2s ease;
+
+  cursor:pointer;
+  margin: 1rem 0 1rem 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/* .btn-open {
+  position: absolute;
+  bottom: 150px;
+} */
+
+.btn-close {
+  transform: translate(10px, -20px);
+  padding: 0.5rem 0.7rem;
+  border-radius: 50%;
+
+}
+
+.btn-close:hover{
+  background: #eee;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.big-bird {
+  width: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #fff;
+}
+
+.small-bird {
+ width: 3.5rem;
+ fill: #1da1f2;
+}
+
+h1, h3 {
+  color: #fff;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 5.5vw;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+section h3{
+  color: var(--medyoBlack);
+  margin: 1rem 0 1rem 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24rem;
+  height: 3.3rem;
+  border-radius: 10vw;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-signup {
+  background: var(--violet);
+  color: #fff;
+  transition: all .2s ease;
+  margin-bottom: 20px;
+}
+
+.btn-signup:hover {
+  /* background: #8d28f2; */
+  opacity: .9;
+}
+
+.btn-login {
+  border: 1px solid var(--violet);
+  color: #fff;
+}
+
+.btn-login:hover{
+  background: var(--violet);
+  opacity:.9;
+}
+
+.footer {
+  padding: 1rem 2%;
+}
+
+.footer nav {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.footer nav a,
+.footer nav div {
+  text-decoration: none;
+  font-size: 13px;
+  color: #536471;
+  margin: .3rem .5rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid transparent;
+  transition: all .2s ease;
+}
+
+.footer nav a:hover {
+  border-bottom: 1px solid #536471;
+}
+
+/* Large screen */
+@media(max-width: 1050px) {
+  .content {
+    order: -1;
+    max-width: 600px;
+    height: 80vh;
+    margin: 0 auto;
+  }
+
+  .image {
+    height: 50vh;
+    flex:  0 1 100vw;
+  }
+
+  .button {
+    display: flex;
+  }
+
+  .btn {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+}
+
+/* Ipad Tablet */
+@media(max-width: 580px) {
+  .content {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .button {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 25rem;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+/* Mobile bobo*/
+@media(max-width: 412px) {
+  .content {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .modal{
+    max-width: 300px ;
+    max-height: max-content;
+    padding: 1rem;
+  }
+
+  .modal input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin: 1rem 0 0rem 0;
+  }
+  
+  .modal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+  }
+  
+  .modal a {
+   color: var(--blue);
+   cursor:pointer;
+  }
+
+  .modal-btn{
+    background: var(--violet);
+    color: #fff;
+    transition: all .2s ease;
+    
+    cursor:pointer;
+    margin: 1rem 0 0rem 0;
+  }
+
+  .modal-btn2{
+    border: 1px solid var(--violet);
+    color: var(--medyoBlack);
+    transition: all .2s ease;
+  
+    cursor:pointer;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .button {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 18rem;
+  }
+
+}
