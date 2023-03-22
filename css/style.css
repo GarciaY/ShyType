@@ -10,7 +10,7 @@
 :root {
   --medyoBlack: #191919;
   --violet: #7F00FF;
-  --blue: #3880FF;
+  --blue: #50b7f5;
 }
 
 
@@ -31,7 +31,7 @@ body {
 
 .image {
   height: 100%;
-  background: url('img/cover-img2.jpg') center center/cover;
+  background: url('/img/cover-img.jpg') center center/cover;
   flex: 0 1 53vw;
   position: relative;
 }
