@@ -271,6 +271,11 @@ scrollbar-width: none;  /* Firefox */
   color: #000;
   font-size: 1.2em;
   padding: 0 15px;
+  border: none;
+}
+
+.chat-input input:active{
+  border: #000;
 }
 
 .send-btn {
@@ -353,7 +358,7 @@ scrollbar-width: none;  /* Firefox */
 
 .widgets__widgetContainer .menu ul {
 	display: flex;
-	padding: 0 20px;
+	padding: 8px 20px;
 }
 
 .widgets__widgetContainer .menu ul li {
@@ -362,6 +367,7 @@ scrollbar-width: none;  /* Firefox */
 	font-weight: 700;
 	font-size: 15px;
 	letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .widgets__widgetContainer .menu .active {
@@ -374,6 +380,7 @@ scrollbar-width: none;  /* Firefox */
 	display: flex;
 	align-items: center;
 	transition: 0.2s box-shadow;
+  cursor: pointer;
 }
 
 .widgets__widgetContainer .messages .avatar img {

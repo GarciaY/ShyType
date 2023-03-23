@@ -152,6 +152,7 @@ body {
 .container .card {
 	position: relative;
 	height: 450px;
+
 }
 
 .post .card .user {
@@ -274,7 +275,7 @@ body {
 
 .widgets__widgetContainer .menu ul {
 	display: flex;
-	padding: 0 20px;
+	padding: 8px 20px;
 }
 
 .widgets__widgetContainer .menu ul li {
@@ -283,6 +284,7 @@ body {
 	font-weight: 700;
 	font-size: 15px;
 	letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .widgets__widgetContainer .menu .active {
@@ -295,6 +297,7 @@ body {
 	display: flex;
 	align-items: center;
 	transition: 0.2s box-shadow;
+  cursor: pointer;
 }
 
 .widgets__widgetContainer .messages .avatar img {
@@ -332,8 +335,8 @@ body {
 }
 
 .post {
-  display: flex;
-  align-items: flex-start;
+  /* display: flex;
+  align-items: flex-start; */
   border-bottom: 1px solid var(--light-background);
   padding-bottom: 10px;
 }
